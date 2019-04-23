@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name></display-name>
+  <servlet>
+    <servlet-name>InitialProjectServlet</servlet-name>
+    <servlet-class>com.lechou.util.InitialProjectServlet</servlet-class>
+    <init-param>
+      <param-name>filepath</param-name>
+      <param-value>uploadFile</param-value>
+    </init-param>
+    <init-param>
+      <param-name>temppath</param-name>
+      <param-value>temp</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>UploadHeadiconServlet</servlet-name>
+    <servlet-class>com.lechou.util.HeadIconUploadServlet</servlet-class>
+    <init-param>
+      <param-name>filepath</param-name>
+      <param-value>uploadFile</param-value>
+    </init-param>
+    <init-param>
+      <param-name>temppath</param-name>
+      <param-value>temp</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <description>uploadimages servlet</description>
+    <display-name>ImagesUpload</display-name>
+    <servlet-name>dd</servlet-name>
+    <servlet-class>dd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitialProjectServlet</servlet-name>
+    <url-pattern>/initialprojectupload</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadHeadiconServlet</servlet-name>
+    <url-pattern>/headiconupload</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>dd</servlet-name>
+    <url-pattern>/servlet/dd</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>com.lechou.util.TimerController</listener-class>
+  </listener>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

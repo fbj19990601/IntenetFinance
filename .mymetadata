@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="lechou1.3"
+  id="myeclipse.1431240789574"
+  context-root="/lechou1.3"
+  j2ee-spec="5.0"
+  archive="lechou1.3.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
